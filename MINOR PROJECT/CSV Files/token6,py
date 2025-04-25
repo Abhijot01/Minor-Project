@@ -1,0 +1,110 @@
+import pandas as pd
+import re
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+import warnings
+import os
+
+# Suppress warnings for cleaner output
+warnings.filterwarnings("ignore")
+
+# Download NLTK resources
+nltk.download("punkt")
+nltk.download("stopwords")
+
+# Define Urdu stopwords
+urdu_stopwords = set([
+    "ہے", "کے", "میں", "اور", "سے", "کا", "کی", "کو", "پر", "ہوں", "تھا", "تھی", "تھے",
+    "ہو", "جا", "گی", "گا", "نے", "بھی", "اب", "جو", "جب", "تو", "اگر", "کہ", "یہ",
+    "وہ", "ایک", "لیے", "ساتھ", "کچھ", "دی", "دے", "کر", "کرے", "کیا", "ہر", "اپ", "ان"
+])  # Add more as needed
+
+# Define Indian English stopwords (using English stopwords as a base)
+english_stopwords = set(stopwords.words("english"))
+
+# Custom Urdu normalization
+def normalize_urdu(text):
+    # Remove diacritics (common Urdu diacritics like zer, zabar, pesh)
+    text = re.sub(r'[\u0610-\u061A\u064B-\u065F\u06D6-\u06DC\u06DF-\u06E8\u06EA-\u06EF]', '', text)
+    # Normalize spaces
+    text = re.sub(r'\s+', ' ', text)
+    # Normalize common Urdu characters
+    text = text.replace('ي', 'ی').replace('ك', 'ک')
+    return text.strip()
+
+# Simple regex-based Urdu tokenizer
+def urdu_tokenize(text):
+    # Split on whitespace and remove punctuation, respecting Urdu Unicode
+    tokens = re.findall(r'\b\w+\b', text, re.UNICODE)
+    return tokens
+
+# Preprocessing function
+def preprocess_text(text, language):
+    try:
+        # Convert to string and handle NaN
+        text = str(text) if pd.notnull(text) else ""
+        if not text.strip():
+            return "empty"
+
+        # Lowercase
+        text = text.lower()
+
+        # Remove URLs
+        text = re.sub(r"http\S+|www\S+|https\S+", "", text, flags=re.MULTILINE)
+
+        # Remove special characters, punctuation, and numbers
+        text = re.sub(r"[^\w\s]", "", text)
+        text = re.sub(r"\d+", "", text)
+
+        # Normalize Urdu text
+        if language == "ur":
+            text = normalize_urdu(text)
+
+        # Tokenize based on language
+        if language == "ur":
+            tokens = urdu_tokenize(text)
+        else:  # For 'en' and 'in'
+            tokens = word_tokenize(text)
+
+        # Remove stopwords based on language
+        if language == "ur":
+            tokens = [token for token in tokens if token not in urdu_stopwords]
+        else:  # For 'en' and 'in'
+            tokens = [token for token in tokens if token not in english_stopwords]
+
+        # Remove short tokens (less than 2 characters)
+        tokens = [token for token in tokens if len(token) > 1]
+
+        # Join tokens back into a string
+        cleaned_text = " ".join(tokens).strip()
+
+        return cleaned_text if cleaned_text else "empty"
+    except Exception as e:
+        print(f"Error preprocessing text: {text}, Error: {str(e)}")
+        return "empty"
+
+# Load dataset with explicit file path
+file_path = r"C:\Users\Dell\Desktop\MINOR PROJECT\CSV Files\PMLN_predicted_tweets.csv"  # Your input file
+try:
+    data = pd.read_csv(file_path)
+except Exception as e:
+    print(f"Error loading dataset: {str(e)}")
+    exit(1)
+
+# Apply preprocessing to the entire dataset
+print("Preprocessing dataset...")
+data["cleaned_tweet"] = data.apply(
+    lambda row: preprocess_text(row["preprocessed_tweet"], row["language"]), axis=1
+)
+
+# Drop rows where cleaned_tweet is empty
+original_size = len(data)
+data = data[data["cleaned_tweet"] != "empty"]
+print(f"Dataset size after preprocessing: {len(data)} rows (dropped {original_size - len(data)} empty rows)")
+
+# Save cleaned dataset to the same directory as the input file
+output_dir = os.path.dirname(file_path)
+output_file = os.path.join(output_dir, "cleaned_PMLN_predicted_tweets.csv")
+data.to_csv(output_file, index=False)
+print(f"Saved cleaned dataset to {output_file}")

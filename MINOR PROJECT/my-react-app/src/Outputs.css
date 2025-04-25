@@ -1,0 +1,97 @@
+.outputs {
+    padding: 3rem 0;
+    background-color: #1f2937;
+  }
+  
+  .outputs h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffffff;
+  }
+  
+  .outputs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .outputs-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .output-card {
+    padding: 1.5rem;
+    background-color: #374151;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+  }
+  
+  .output-card:hover {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.7), 0 0 25px rgba(59, 130, 246, 0.4);
+  }
+  
+  .output-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff;
+  }
+  
+  .output-card p {
+    font-size: 1rem;
+    color: #d1d5db;
+  }
+  
+  .outputs > .container > p {
+    margin-top: 2rem;
+    font-size: 1.125rem;
+    text-align: center;
+    color: #d1d5db;
+  }
+  
+  .image-upload {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .image-upload h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffffff;
+  }
+  
+  .upload-input {
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #374151;
+    border: 1px solid #4b5563;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .upload-input:hover {
+    background-color: #4b5563;
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .uploaded-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
