@@ -1,0 +1,150 @@
+2025-04-23 12:36:28,684 - INFO - Loading splits for cleaned_output1.csv...
+2025-04-23 12:36:28,707 - INFO - Text vectorized with 2118 features.
+2025-04-23 12:36:28,707 - INFO - Training Logistic Regression...
+2025-04-23 12:36:29,012 - INFO - Logistic Regression Results:
+2025-04-23 12:36:29,012 - INFO -   Accuracy: 37.32%
+2025-04-23 12:36:29,013 - INFO -   Precision: 40.19%
+2025-04-23 12:36:29,013 - INFO -   Recall: 37.32%
+2025-04-23 12:36:29,013 - INFO -   F1-Score: 30.89%
+2025-04-23 12:36:29,014 - INFO - Training Random Forest...
+2025-04-23 12:36:29,998 - INFO - Random Forest Results:
+2025-04-23 12:36:30,000 - INFO -   Accuracy: 51.41%
+2025-04-23 12:36:30,001 - INFO -   Precision: 51.49%
+2025-04-23 12:36:30,001 - INFO -   Recall: 51.41%
+2025-04-23 12:36:30,001 - INFO -   F1-Score: 45.70%
+2025-04-23 12:36:30,001 - INFO - Training Naive Bayes...
+2025-04-23 12:36:30,013 - INFO - Naive Bayes Results:
+2025-04-23 12:36:30,014 - INFO -   Accuracy: 20.42%
+2025-04-23 12:36:30,014 - INFO -   Precision: 8.62%
+2025-04-23 12:36:30,014 - INFO -   Recall: 20.42%
+2025-04-23 12:36:30,015 - INFO -   F1-Score: 9.28%
+2025-04-23 12:36:30,016 - INFO - Training Decision Tree...
+2025-04-23 12:36:30,239 - INFO - Decision Tree Results:
+2025-04-23 12:36:30,240 - INFO -   Accuracy: 49.30%
+2025-04-23 12:36:30,240 - INFO -   Precision: 52.22%
+2025-04-23 12:36:30,240 - INFO -   Recall: 49.30%
+2025-04-23 12:36:30,240 - INFO -   F1-Score: 48.91%
+2025-04-23 12:36:30,241 - INFO - Training SVM...
+2025-04-23 12:36:30,288 - INFO - SVM Results:
+2025-04-23 12:36:30,288 - INFO -   Accuracy: 53.52%
+2025-04-23 12:36:30,289 - INFO -   Precision: 54.28%
+2025-04-23 12:36:30,289 - INFO -   Recall: 53.52%
+2025-04-23 12:36:30,290 - INFO -   F1-Score: 50.07%
+2025-04-23 12:36:30,295 - INFO - 
+Model Comparison Table:
+2025-04-23 12:36:30,299 - INFO -               Model  Accuracy  Precision  Recall  F1-Score  Composite Score
+                SVM    53.52%     54.28%  53.52%    50.07%          100.00%
+      Random Forest    51.41%     51.49%  51.41%    45.70%           92.68%
+      Decision Tree    49.30%     52.22%  49.30%    48.91%           91.86%
+Logistic Regression    37.32%     40.19%  37.32%    30.89%           56.49%
+        Naive Bayes    20.42%      8.62%  20.42%     9.28%            0.99%
+2025-04-23 12:36:30,300 - INFO - 
+Best Model: SVM
+2025-04-23 12:36:30,300 - INFO - Composite Score: 100.00%
+2025-04-23 12:36:30,301 - INFO - Note: Best model based on composite score (average of normalized metrics).
+2025-04-23 12:36:30,305 - INFO - Results saved to c:\Users\Dell\Desktop\MINOR PROJECT\CSV Files\model_comparison_cleaned_output1.csv
+INFO - Loading splits for cleaned_output1.csv...
+INFO - Text vectorized with 2118 features.
+INFO - 
+Logistic Regression Evaluation Metrics:
+INFO - Accuracy: 37.32%
+INFO - Precision: 40.19%
+INFO - Recall: 37.32%
+INFO - F1-Score: 30.89%
+INFO - 
+Random Forest Evaluation Metrics:
+INFO - Accuracy: 51.41%
+INFO - Precision: 51.49%
+INFO - Recall: 51.41%
+INFO - F1-Score: 45.70%
+INFO - 
+Naive Bayes Evaluation Metrics:
+INFO - Accuracy: 20.42%
+INFO - Precision: 8.62%
+INFO - Recall: 20.42%
+INFO - F1-Score: 9.28%
+INFO - 
+Decision Tree Evaluation Metrics:
+INFO - Accuracy: 49.30%
+INFO - Precision: 52.22%
+INFO - Recall: 49.30%
+INFO - F1-Score: 48.91%
+INFO - 
+SVM Evaluation Metrics:
+INFO - Accuracy: 53.52%
+INFO - Precision: 54.28%
+INFO - Recall: 53.52%
+INFO - F1-Score: 50.07%
+INFO - 
+Model Comparison Table:
+INFO -               Model  Accuracy  Precision  Recall  F1-Score  Composite Score
+                SVM    53.52%     54.28%  53.52%    50.07%          100.00%
+      Random Forest    51.41%     51.49%  51.41%    45.70%           92.68%
+      Decision Tree    49.30%     52.22%  49.30%    48.91%           91.86%
+Logistic Regression    37.32%     40.19%  37.32%    30.89%           56.49%
+        Naive Bayes    20.42%      8.62%  20.42%     9.28%            0.99%
+INFO - 
+Best Model: SVM
+INFO - Composite Score: 100.00%
+INFO - Note: Best model based on composite score (average of normalized metrics).
+INFO - Results saved to c:\Users\Dell\Desktop\MINOR PROJECT\CSV Files\model_comparison_cleaned_output1.csv
+Loading splits for cleaned_output1.csv...
+Text vectorized with 2118 features.
+Logistic Regression - Classes in y_train: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69}
+Logistic Regression - Classes in y_test: {0, 1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 33, 34, 35, 37, 38, 40, 41, 42, 43, 44, 46, 47, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 65, 66, 67, 68, 69}
+Class mismatch between y_train and y_test for Logistic Regression
+
+Logistic Regression Evaluation Metrics:
+Accuracy: 37.32%
+Precision: 43.00%
+Recall: 37.32%
+F1-Score: 30.89%
+Random Forest - Classes in y_train: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69}
+Random Forest - Classes in y_test: {0, 1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 33, 34, 35, 37, 38, 40, 41, 42, 43, 44, 46, 47, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 65, 66, 67, 68, 69}
+Class mismatch between y_train and y_test for Random Forest
+
+Random Forest Evaluation Metrics:
+Accuracy: 51.41%
+Precision: 74.73%
+Recall: 51.41%
+F1-Score: 45.70%
+Naive Bayes - Classes in y_train: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69}
+Naive Bayes - Classes in y_test: {0, 1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 33, 34, 35, 37, 38, 40, 41, 42, 43, 44, 46, 47, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 65, 66, 67, 68, 69}
+Class mismatch between y_train and y_test for Naive Bayes
+
+Naive Bayes Evaluation Metrics:
+Accuracy: 20.42%
+Precision: 68.48%
+Recall: 20.42%
+F1-Score: 9.28%
+Decision Tree - Classes in y_train: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69}
+Decision Tree - Classes in y_test: {0, 1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 33, 34, 35, 37, 38, 40, 41, 42, 43, 44, 46, 47, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 65, 66, 67, 68, 69}
+Class mismatch between y_train and y_test for Decision Tree
+
+Decision Tree Evaluation Metrics:
+Accuracy: 49.30%
+Precision: 61.37%
+Recall: 49.30%
+F1-Score: 48.91%
+SVM - Classes in y_train: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69}
+SVM - Classes in y_test: {0, 1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 33, 34, 35, 37, 38, 40, 41, 42, 43, 44, 46, 47, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 65, 66, 67, 68, 69}
+Class mismatch between y_train and y_test for SVM
+
+SVM Evaluation Metrics:
+Accuracy: 53.52%
+Precision: 58.50%
+Recall: 53.52%
+F1-Score: 50.07%
+
+Model Comparison Table:
+              Model  Accuracy  Precision  Recall  F1-Score  Composite Score
+      Random Forest    51.41%     74.73%  51.41%    45.70%           94.19%
+                SVM    53.52%     58.50%  53.52%    50.07%           87.34%
+      Decision Tree    49.30%     61.37%  49.30%    48.91%           82.55%
+Logistic Regression    37.32%     43.00%  37.32%    30.89%           39.38%
+        Naive Bayes    20.42%     68.48%  20.42%     9.28%           20.86%
+
+Best Model: Random Forest
+Composite Score: 94.19%
+Note: Best model based on composite score (average of normalized metrics).
+Results saved to c:\Users\Dell\Desktop\MINOR PROJECT\CSV Files\model_comparison_cleaned_output1.csv
