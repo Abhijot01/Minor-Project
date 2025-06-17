@@ -1,0 +1,13 @@
+text,cleaned_text,adjusted_text,actual_sentiment,predicted_sentiment,attempts_used
+Loving this sunny weather today!,loving sunny weather today,loving sunny weather and today,positive,bad,5
+"Stuck in traffic, so frustrating.",stuck traffic frustrating,stuck traffic frustrating,negative,negative,1
+Just had the best coffee ever!,best coffee ever,best coffee ever,positive,positive,1
+Feeling a bit tired this morning.,feeling bit tired morning,feeling bit tired morning,negative,negative,1
+Going for a walk in the park.,going walk park,park walk going,neutral,bad,5
+Excited for the concert tonight!,excited concert tonight,excited concert tonight,positive,positive,1
+The rain ruined my plans today.,rain ruined plans today,rain ruined plans,negative,other,5
+"Watching a new series, it's okay.",watching new series okay,watching new okay,neutral,positive,5
+Feeling really down after the news.,feeling really down news,feeling down news,bad,other,5
+"Just baked cookies, they’re amazing!",baked cookies amazing,and baked cookies amazing,positive,other,5
+Work is so stressful this week.,work stressful week,week stressful work,negative,positive,5
+Planning a quiet evening at home.,planning quiet evening home,planning quiet evening,neutral,positive,5
